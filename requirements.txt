@@ -1,6 +1,6 @@
-numpy>=1.22.2
-scikit-image>=0.19
+numpy>=1.23.5,<2.0.0
+scikit-image==0.22.0
 tqdm
-opencv-python-headless
+opencv-python-headless==4.9.0.80
 read-roi
-pandas
+pandas==2.2.2
