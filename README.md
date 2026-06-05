@@ -5,8 +5,9 @@ ANMAF is an automated framework for detecting cells in neuronal images using [Ma
 ## Installation
 The easiest way of reproducing our work should be by using [conda](https://conda.io/). Assuming that you have Anaconda installed and configured on your system, run the following commands in the command prompt/terminal to create a virtual environment and activate it.
 ```bash
-conda create -n anmaf python=3.8
-conda activate anmaf
+conda create -n anmaf-tf-gpu python=3.10 -y
+conda activate anmaf-tf-gpu
+pip install --upgrade pip
 ```
 
 Once the environment is created and activated, navigate into the directory where you cloned this repository. Then run the following command to install all the required 3rd-party libraries.
@@ -16,7 +17,7 @@ pip install -r requirements.txt
 
 Additionally, you would need [TensorFlow](https://www.tensorflow.org/) installed in your environment. Assuming [CUDA](https://developer.nvidia.com/cuda-toolkit) and [CuDNN](https://developer.nvidia.com/cudnn) are already configured correctly, TensorFlow can be installed via the following command:
 ```bash
-pip install tensorflow
+pip install "tensorflow[and-cuda]==2.15.0.post1"
 ```
 See the [official TensorFlow documentation](https://www.tensorflow.org/install/gpu) for more details.
 
